@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 10rem;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            background-color: aqua;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #3c3c3c;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #eee;
+            text-shadow: 2px 2px 4px #555;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #eee;
+            text-shadow: 2px 2px 4px #555;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: red;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript addEventListener() Hands-On</h1>
+
+    <h2>Click on the buttons below to see different actions:</h2>
+
+    <button id="Btn1">Button 1</button>
+    <button id="Btn2">Button 2</button>
+    <button id="Btn3">Button 3</button>
+
+    <script>
+        let btn1 = document.getElementById('Btn1');
+        let btn2 = document.getElementById('Btn2');
+        let btn3 = document.getElementById('Btn3');
+
+        btn1.addEventListener('click', btn1Function);
+        btn2.addEventListener('click', btn2Function);
+        btn3.addEventListener('click', btn3Function);
+
+        function btn1Function(){
+            window.alert("Button 1 was clicked!");
+        }
+        function btn2Function(){
+            window.alert("Button 2 was clicked!");
+        }
+        function btn3Function(){
+            window.alert("Button 3 was clicked!");
+        }
+    </script>
+
+</body>
+</html>
